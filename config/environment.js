@@ -4,6 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'todo-mvc',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com",
+     'style-src': "'self' 'unsafe-inline'" },
+    firebase: 'https://taske.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
